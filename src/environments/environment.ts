@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   API: 'https://cors-anywhere.herokuapp.com/http://pokeapi.co/api/v2/',
+  // API: 'https://cors.now.sh/https://pokeapi.co/api/v2/'
 };
 
 /*

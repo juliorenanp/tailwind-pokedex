@@ -1,15 +1,15 @@
 <div class="flex justify-between m-6">
     <div class="flex flex-col h-full max-w-lg mx-auto bg-gray-800 rounded-lg">
             <img
-              class="rounded-lg rounded-b-none"
-              src="http://www.3forty.media/ruki/wp-content/uploads/2020/06/meditation-yoga-1024x682.jpg"
+              class="rounded-lg rounded-b-none bg-purple-400"
+              [src]="pokemonPhoto"
               alt="thumbnail"
               loading="lazy"
             />
             <div class="flex justify-between -mt-4 px-4">
               <span
-                class="inline-block ring-4 bg-red-500 ring-gray-800 rounded-full text-sm font-medium tracking-wide text-gray-100 px-3 pt-0.5"
-                >Tipo</span
+                class="inline-block ring-4 bg-red-500 ring-red-800 rounded-full text-sm font-medium tracking-wide text-gray-100 px-3 pt-0.5"
+                >{{pokemonType}}</span
               >
               <span
                 class="flex h-min space-x-1 items-center rounded-full text-gray-400 bg-gray-800 py-1 px-2 text-xs font-medium"
@@ -25,11 +25,11 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                   />
                 </svg>
-                <p class="text-blue-500 font-semibold text-xs">
-                  Próximo
+                <p class="text-blue-500 font-semibold text-xs" (click)="getNextPokemon()">
+                 <a href="#"> Próximo</a>
                 </p>
               </span>
             </div>
@@ -37,12 +37,12 @@
               <h1
                 class="text-xl font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer"
               >
-                <a href="blog/detail">Nome do Pokemon</a>
+                <a href="#">{{pokemonName | uppercase }} Nº{{pokemonNumber}}</a>
               </h1>
             </div>
             <div class="px-4 space-y-2">
               <p class="text-gray-400 font-normal leading-5 tracking-wide">
-                Tailwind CSS v2.1 introduces a new just-in-time compiler for Tailwind CSS that generates your styles on-demand...
+                {{pokemonDescription}}
               </p>
             
             </div>
