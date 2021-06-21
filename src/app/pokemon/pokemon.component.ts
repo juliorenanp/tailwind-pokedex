@@ -14,6 +14,24 @@ export class PokemonComponent implements OnInit {
   pokemonPhoto: string | undefined;
   pokemonUrl: string | undefined;
 
+  classe : Array <{type: string}> = [
+    {
+      type:'water'
+    },
+    {
+      type:'fire'
+    },
+    {
+      type:'grass'
+    },
+    {
+      type:'ghost'
+    },
+    {
+      type:'dragon'
+    },
+  ];
+  
 
   constructor(private service: PokemonService) { }
   ngOnInit(): void {
@@ -56,6 +74,15 @@ export class PokemonComponent implements OnInit {
       .subscribe((data: any) => {
         this.pokemonDescription = data.flavor_text_entries[0].flavor_text;
       });
+  }
+
+  getClass(type: string): string{
+    // switch (type){
+    //   case 'water':{
+    //   break;
+    //   }
+    // }
+    return 'bg-purple-500 ring-purple-800';
   }
 
 }
