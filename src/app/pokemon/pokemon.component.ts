@@ -80,14 +80,64 @@ export class PokemonComponent implements OnInit {
 
     switch (type){
       case 'water':{
-        return { 'bg-blue-500 blue-purple-800' : true };  
+        return { 'bg-blue-500 ring-blue-800' : true };  
       }
       case 'normal': {
-        return { 'bg-blue-500 blue-purple-800' : true };  
+        return { 'bg-gray-200 ring-gray-800' : true };  
+      }
+      case 'fighting': {
+        return { 'bg-yellow-500 ring-yellow-800' : true };  
+      }
+      case 'flying': {
+        return { 'bg-sky-500 ring-sky-800' : true };  
+      }
+      case 'poison': {
+        return { 'bg-purple-500 ring-purple-800' : true };  
+      }
+      case 'ground': {
+        return { 'bg-orange-500 ring-orange-800' : true };  
+      }
+      case 'rock': {
+        return { 'bg-yellow-700 ring-yellow-900' : true };  
+      }
+      case 'bug': {
+        return { 'bg-green-500 ring-green-800' : true };  
+      }
+      case 'ghost': {
+        return { 'bg-purple-500 ring-purple-800' : true };  
+      }
+      case 'steel': {
+        return { 'bg-gray-500 ring-gray-800' : true };  
+      }
+      case 'fire': {
+        return { 'bg-red-500 ring-red-800' : true };  
+      }
+      case 'grass': {
+        return { 'bg-green-500 ring-green-800' : true };  
+      }
+      case 'electric': {
+        return { 'bg-yellow-200 ring-yellow-400' : true };  
+      }
+      case 'psychic': {
+        return { 'bg-pink-500 ring-pink-800' : true };  
+      }
+      case 'ice': {
+        return { 'bg-indigo-200 ring-indigo-800' : true };  
+      }
+      case 'dragon': {
+        return { 'bg-indigo-200 ring-indigo-800' : true };  
+      }
+      case 'dark': {
+        return { 'bg-gray-500 ring-gray-900' : true };  
+      }
+      case 'fairy': {
+        return { 'bg-pink-200 ring-pink-800' : true };  
+      }
+      case 'shadow': {
+        return { 'bg-gray-200 ring-gray-800' : true };  
       }
       default: { 
-           return {'bg-gray-500 blue-gray-800': true};
-        
+           return {'bg-gray-500 ring-gray-800': true};
       } 
       
       // fighting
@@ -108,7 +158,6 @@ export class PokemonComponent implements OnInit {
       // dark
       // fairy
       // shadow
-
     }
   }
 }
