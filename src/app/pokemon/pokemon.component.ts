@@ -9,7 +9,7 @@ import { PokemonService } from '../service/pokemon.service';
 export class PokemonComponent implements OnInit {
   pokemonNumber!: number;
   pokemonName: string | undefined;
-  pokemonType: string | undefined;
+  pokemonType!: string;
   pokemonDescription: string | undefined;
   pokemonPhoto: string | undefined;
   pokemonUrl: string | undefined;
@@ -76,13 +76,39 @@ export class PokemonComponent implements OnInit {
       });
   }
 
-  getClass(type: string): string{
-    // switch (type){
-    //   case 'water':{
-    //   break;
-    //   }
-    // }
-    return 'bg-purple-500 ring-purple-800';
-  }
+  getClass(type: string){
 
+    switch (type){
+      case 'water':{
+        return { 'bg-blue-500 blue-purple-800' : true };  
+      }
+      case 'normal': {
+        return { 'bg-blue-500 blue-purple-800' : true };  
+      }
+      default: { 
+           return {'bg-gray-500 blue-gray-800': true};
+        
+      } 
+      
+      // fighting
+      // flying
+      // poison
+      // ground
+      // rock
+      // bug
+      // ghost
+      // steel
+      // fire
+      // water
+      // grass
+      // electric
+      // psychic
+      // ice
+      // dragon
+      // dark
+      // fairy
+      // shadow
+
+    }
+  }
 }
