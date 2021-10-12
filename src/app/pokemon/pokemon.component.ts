@@ -160,4 +160,71 @@ export class PokemonComponent implements OnInit {
       // shadow
     }
   }
+
+  getBackGroundClass(type: string){
+
+    switch (type){
+      case 'water':{
+        return { 'from-blue-200 to-blue-800' : true };  
+      }
+      case 'normal': {
+        return { 'from-gray-200 to-gray-800' : true };  
+      }
+      case 'fighting': {
+        return { 'from-yellow-500 to-yellow-800' : true };  
+      }
+      case 'flying': {
+        return { 'from-sky-500 to-sky-800' : true };  
+      }
+      case 'poison': {
+        return { 'from-purple-500 to-purple-800' : true };  
+      }
+      case 'ground': {
+        return { 'from-orange-500 to-orange-800' : true };  
+      }
+      case 'rock': {
+        return { 'from-yellow-700 to-yellow-900' : true };  
+      }
+      case 'bug': {
+        return { 'from-green-500 to-green-800' : true };  
+      }
+      case 'ghost': {
+        return { 'from-purple-500 to-purple-800' : true };  
+      }
+      case 'steel': {
+        return { 'from-gray-500 to-gray-800' : true };  
+      }
+      case 'fire': {
+        return { 'from-red-500 to-red-800' : true };  
+      }
+      case 'grass': {
+        return { 'from-green-200 to-green-800' : true };  
+      }
+      case 'electric': {
+        return { 'from-yellow-200 to-yellow-400' : true };  
+      }
+      case 'psychic': {
+        return { 'from-pink-500 to-pink-800' : true };  
+      }
+      case 'ice': {
+        return { 'from-indigo-200 to-indigo-800' : true };  
+      }
+      case 'dragon': {
+        return { 'from-indigo-200 to-indigo-800' : true };  
+      }
+      case 'dark': {
+        return { 'from-gray-500 to-gray-900' : true };  
+      }
+      case 'fairy': {
+        return { 'from-pink-200 to-pink-800' : true };  
+      }
+      case 'shadow': {
+        return { 'from-gray-200 to-gray-800' : true };  
+      }
+      default: { 
+           return {'from-gray-500 to-gray-800': true};
+      } 
+    
+    }
+  }
 }
